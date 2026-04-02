@@ -11,7 +11,7 @@ and then publishes an image to the GitHub Container Registry.
 """
 
 app = FastAPI(
-    title="Random Generator",
+    title="Random Value Generator",
     description=description
 )
 

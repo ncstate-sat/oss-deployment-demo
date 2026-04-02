@@ -1,6 +1,6 @@
-# Random Generator - Deployment Demo
+# Public CI/CD Demo - Random Value Generator
 
-A simple FastAPI application demonstrating automated testing and image publication via GitHub Actions.
+A simple FastAPI application demonstrating automated testing and deployment via GitHub Actions.
 
 ## Getting Started
 
