@@ -3,16 +3,16 @@ from pydantic import BaseModel
 import random
 
 description = """
-Generate various random values.
+A utility for generating random numbers, coin flips, and dice rolls.
 
-This application demos a public deployment of an application.
-It comes complete with a GitHub Actions workflow that runs tests
-and then publishes an image to the GitHub Container Registry.
+This API provides a simple interface for obtaining randomized data 
+for games, statistics, or general testing.
 """
 
 app = FastAPI(
     title="Random Value Generator",
-    description=description
+    description=description,
+    version="1.0.0"
 )
 
 class RandomNumberRequestBody(BaseModel):

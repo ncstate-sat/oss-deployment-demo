@@ -1,6 +1,16 @@
-# Public CI/CD Demo - Random Value Generator
+# Open Source CI/CD Demo - Random Value Generator
 
-A simple FastAPI application demonstrating automated testing and deployment via GitHub Actions.
+This project demonstrates the lifecycle of an open-source application, from
+raw Python code to a publicly available container image via a standardized CI/CD pipeline.
+
+When code is merged into the main branch, a GitHub Actions workflow is triggered to:
+
+1. Execute a test suite.
+2. Build the application into a Docker image (only if tests pass).
+3. Publish that image to the GitHub Container Registry (GHCR).
+
+The demo app is a random number generator built with FastAPI. Once running, you can
+see the API documentation in your browser at `/docs`.
 
 ## Getting Started
 
@@ -10,8 +20,8 @@ A simple FastAPI application demonstrating automated testing and deployment via 
 
 #### Running in a Container
 
-1. **Build an image:** `docker build -t random-generator .`
-2. **Run a container:** `docker run --name generator -p 8000:8000 random-generator`
+1. **Build an image:** `docker build -t random-number-generator .`
+2. **Run a container:** `docker run --name generator -p 8000:8000 random-number-generator`
 3. **Run tests:** `docker exec -it generator bash` then `pytest`
 
 ## CI/CD Workflow Jobs
